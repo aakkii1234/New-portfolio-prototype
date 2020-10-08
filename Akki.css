@@ -1,0 +1,128 @@
+@chartset "utf-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background: #fff url('bg.jpg') top right no-repeat;
+}
+.wrapper {
+    background-color: rgba(0, 0, 0, .3);
+}
+header, footer {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+}
+footer {
+    bottom: 0;
+    text-align: right;
+}
+h1 {
+    float: left;
+    color: #444;
+    margin-left: 20px;
+    font-size: 36px;
+    font-family: 'Abril Fatface', cursive;
+}
+nav {
+    float: right;
+    padding: 10px;
+}
+nav a {
+    padding: 10px;
+    color: #fff;
+    text-shadow: 3px 3px 2px #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav a:hover, nav a.active {
+    text-decoration: underline;
+}
+.clear {
+    clear: both;
+}
+.clear:after {
+    clear: both;
+}
+.clear:after, .clear:before {
+    content: "";
+    display: table;
+}
+section {
+    background-color: #fff;
+    height: 100vh;
+    width: 53%;
+    box-shadow: 3px 0 10px #000;
+    animation-name: slideAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: fadeAnime;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 1.3s;
+}
+.container p {
+    margin-left: 90px;
+    font-size: 28px;
+    color: #555;
+    text-shadow: 3px 3px 5px #bbb;
+    font-style: italic;
+    font-family: 'Handlee', cursive;
+}
+.container button {
+    margin-left: 90px;
+    margin-top: 25px;
+    padding: 15px 20px;
+    border: 1px solid #555;
+    border-radius: 14px;
+    color: #555;
+    cursor: pointer;
+    background: none;
+    font-size: 16px;
+    transition: .1s;
+}
+.container button:hover {
+    box-shadow: 1px 1px 4px #777;
+}
+.social-icons a{
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e3e3;
+    margin: 20px 10px;
+    border-radius: 50%;
+}
+.social-icons{
+    display: flex;
+}
+
+@keyframes slideAnime {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 53%;
+    }
+}
+@keyframes fadeAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
